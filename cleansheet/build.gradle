@@ -1,0 +1,93 @@
+import java.nio.file.Paths
+import java.text.SimpleDateFormat
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.4.5"
+    id 'com.palantir.git-version' version '0.11.0'
+    id 'ch.netzwerg.release' version '1.2.5'
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: "java"
+
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+
+def fast = Boolean.valueOf(String.valueOf(findProperty('fast')))
+
+configurations {
+    testAgent {
+        transitive = false
+    }
+}
+
+def ideaCacheDir = Paths.get(System.getProperty('user.home')).resolve('intellij-gradle-cache').toAbsolutePath().toString()
+println("Idea cache dir: " + ideaCacheDir)
+
+intellij {
+    version = ideaVersion
+    type = ideaType
+    updateSinceUntilBuild = false
+    downloadSources = true
+    ideaDependencyCachePath = ideaCacheDir
+}
+
+apply plugin: 'idea'
+idea {
+    project {
+        jdkName = javaVersion
+        languageLevel = javaVersion
+    }
+}
+
+compileJava.options.encoding = encoding
+compileTestJava.options.encoding = encoding
+
+patchPluginXml {
+    changeNotes "${file('change-notes.html').getText('UTF-8')}"
+    pluginDescription "${file('description.html').getText('UTF-8')}"
+            .replace("RELEASE_DATETIME", buildTime())
+            .replace("RELEASE_TYPE", buildType());
+}
+
+jar {
+    manifest {
+        attributes(
+            'Name': project.name,
+            'Specification-Title': project.name,
+            'Specification-Vendor': 'Lukasz Zielinski (zieluuuu@gmail.com)',
+            'Specification-Version': project.version,
+            'Implementation-Title': project.name,
+            'Implementation-Vendor': 'Lukasz Zielinski (zieluuuu@gmail.com)',
+            'Implementation-Version': versionDetails().gitHash,
+            'Build-Date': buildTime()
+        )
+    }
+}
+
+release {
+    tagPrefix = ''
+    dependsOn buildPlugin
+}
+
+
+def static buildTime() {
+    def df = new SimpleDateFormat("yyyyMMdd.HHmmss")
+    df.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return df.format(new Date())
+}
+
+def buildType() {
+    def details = versionDetails()
+    return details.branchName != "master" ? "EAP" : "Stable"
+}

@@ -1,0 +1,37 @@
+<idea-plugin url="https://github.com/zielu/cleansheet4idea">
+  <id>zielu.cleansheet</id>
+  <name>Cleansheet Theme</name>
+  <version>191.0.0-dev</version>
+  <vendor url="https://github.com/zielu">Lukasz Zielinski</vendor>
+
+  <description><![CDATA[
+      inlined during build from description.html
+      ]]>
+  </description>
+
+  <change-notes><![CDATA[
+      inlined during build from change-notes.html
+      ]]>
+  </change-notes>
+
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- enable plugins in all products -->
+  <depends>com.intellij.modules.platform</depends>
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="191.5701.16" until-build="191.*"/>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <themeProvider id="23d6ad9b-a209-4efb-bcd0-fb459dc44863" path="/cleansheet.theme.json"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+</idea-plugin>
