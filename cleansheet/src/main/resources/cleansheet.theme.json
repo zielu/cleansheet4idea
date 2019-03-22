@@ -200,7 +200,7 @@
       }
     },
 
-    "Tree.rowHeight": 22,
+    "Tree.rowHeight": 20,
 
     "VersionControl": {
       "Log.Commit.currentBranchBackground": "#e6f0f2",
