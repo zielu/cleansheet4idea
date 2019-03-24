@@ -8,6 +8,12 @@ For list of features see [description](./GitToolBox/description.html)
 ## Change notes
 For list of change notes see [changenotes](./GitToolBox/change-notes.html)
 
+## XML starlet
+Removed options with name that starts with `VALUE.`
+```
+xml ed -d "/scheme/attributes/option[starts-with(@name, 'VALUE.')]" cleansheet.xml
+```
+
 ## Building & running
 
 ### Build parameters
