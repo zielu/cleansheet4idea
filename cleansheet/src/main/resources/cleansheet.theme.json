@@ -6,10 +6,11 @@
 
   "ui": {
     "*": {
-      "background": "#F2F3F5",
+      "background": "#e9eaec",
       "foreground": "#1F1F1F",
 
-      "selectionBackground":  "#407FC7",
+      "selectionBackground": "#c7c7c7",
+      "selectionForeground": "#1F1F1F",
       "selectionBackgroundInactive": "#D5D5D5",
       "selectionInactiveBackground": "#D5D5D5",
 
@@ -20,10 +21,10 @@
       "infoForeground": "#808080",
       "modifiedItemForeground": "#006be6",
 
-      "acceleratorSelectionForeground": "#FFFFFF",
+      "acceleratorSelectionForeground": "#F8F8F8",
 
-      "separatorColor": "#E1E3E6",
-      "borderColor": "#E1E3E6"
+      "separatorColor": "#d4d6d9",
+      "borderColor": "#d4d6d9"
     },
 
     "Borders": {
@@ -36,7 +37,7 @@
       "startBorderColor": "#C4C4C4",
       "endBorderColor": "#C4C4C4",
       "default": {
-        "foreground": "#FFFFFF",
+        "foreground": "#F8F8F8",
         "startBackground": "#528CC7",
         "endBackground": "#4989CC",
         "startBorderColor": "#487EB8",
@@ -46,10 +47,10 @@
       }
     },
 
-    "ComboBox.nonEditableBackground": "#FFFFFF",
+    "ComboBox.nonEditableBackground": "#F8F8F8",
     "ComboBox.ArrowButton.background": "#f7f8fa",
 
-    "ComboBoxButton.background": "#FFFFFF",
+    "ComboBoxButton.background": "#F8F8F8",
 
     "ComboPopup.border": "1,1,1,1,D4D6D9",
 
@@ -60,7 +61,7 @@
 
     "Counter": {
       "background": "#9AA7B0",
-      "foreground": "#FFFFFF"
+      "foreground": "#F8F8F8"
     },
 
     "Editor": {
@@ -72,8 +73,8 @@
     "EditorPane.inactiveBackground": "#F2F3F5",
 
     "EditorTabs": {
-      "selectedBackground": "#FFFFFF",
-      "inactiveMaskColor": "#4d4d4d12"
+      "selectedBackground": "#f5f5f5",
+      "inactiveMaskColor": "#43434312"
     },
 
     "DebuggerTabs.selectedBackground": "#F2F3F5",
@@ -89,6 +90,10 @@
       "pressedForeground": "#2163A6",
       "visitedForeground": "#2163A6",
       "secondaryForeground": "#77a8d9"
+    },
+
+    "List": {
+      "background": "#F8F8F8"
     },
 
     "Notification": {
@@ -111,13 +116,13 @@
       }
     },
 
-    "PasswordField.background": "#FFFFFF",
+    "PasswordField.background": "#F8F8F8",
 
     "Plugins": {
-      "background": "#FFFFFF",
-      "SearchField.background": "#FFFFFF",
+      "background": "#F8F8F8",
+      "SearchField.background": "#F8F8F8",
       "SectionHeader.foreground": "#808080",
-      "Tab.selectedBackground": "#D5D6D7",
+      "Tab.selectedBackground": "#e3e4e5",
       "Tab.hoverBackground": "#D5D6D7",
       "lightSelectionBackground": "#F4F9FF"
     },
@@ -144,7 +149,7 @@
     },
 
     "SearchEverywhere":  {
-      "SearchField.background": "#FFFFFF",
+      "SearchField.background": "#F8F8F8",
       "Tab.selectedBackground": "#D5D6D7",
       "Advertiser.foreground": "#8C8C8C"
     },
@@ -164,17 +169,17 @@
 
     "TabbedPane": {
       "underlineColor": "#407FC7",
-      "hoverColor": "#E1E2E3",
+      "hoverColor": "#c7c7c7",
       "contentAreaColor": "#E1E3E6"
     },
 
-    "Table.stripeColor": "#F2F3F5",
+    "Table.stripeColor": "#F8F8F8",
 
     "TableHeader.cellBorder": "3,0,3,0",
 
-    "TextArea.background": "#FFFFFF",
+    "TextArea.background": "#F8F8F8",
 
-    "TextField.background": "#FFFFFF",
+    "TextField.background": "#F8F8F8",
 
     "ToggleButton": {
       "onBackground": "#407FC7",
@@ -200,7 +205,10 @@
       }
     },
 
-    "Tree.rowHeight": 20,
+    "Tree": {
+      "rowHeight": 20,
+      "background": "#ebecee"
+    },
 
     "VersionControl": {
       "Log.Commit.currentBranchBackground": "#e6f0f2",
