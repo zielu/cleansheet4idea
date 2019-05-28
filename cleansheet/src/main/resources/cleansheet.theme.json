@@ -74,7 +74,7 @@
 
     "EditorTabs": {
       "selectedBackground": "#f5f5f5",
-      "inactiveMaskColor": "#43434312"
+      "inactiveColoredFileBackground": "#43434312"
     },
 
     "DebuggerTabs.selectedBackground": "#F2F3F5",
