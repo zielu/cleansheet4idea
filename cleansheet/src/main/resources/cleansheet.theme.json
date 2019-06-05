@@ -206,7 +206,7 @@
     },
 
     "Tree": {
-      "rowHeight": 20,
+      "rowHeight": "20",
       "background": "#ebecee"
     },
 
