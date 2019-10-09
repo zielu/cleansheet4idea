@@ -73,11 +73,11 @@
     "EditorPane.inactiveBackground": "#F2F3F5",
 
     "EditorTabs": {
-      "selectedBackground": "#f5f5f5",
+      "underlinedTabBackground": "#f5f5f5",
       "inactiveColoredFileBackground": "#43434312"
     },
 
-    "DebuggerTabs.selectedBackground": "#F2F3F5",
+    "DebuggerTabs.underlinedTabBackground": "#F2F3F5",
 
     "FileColor.Yellow": "#F5F0DF",
     "FileColor.Green": "#E8F2DF",
@@ -194,7 +194,7 @@
         "inactiveBackground": "#F2F3F5"
       },
       "HeaderTab": {
-        "selectedBackground": "#D5D6D7",
+        "underlinedTabBackground": "#D5D6D7",
         "hoverBackground": "#D5D6D7",
         "selectedInactiveBackground": "#e1e2e3",
         "hoverInactiveBackground": "#e1e2e3"

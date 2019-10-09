@@ -42,6 +42,13 @@ Update gradlew version
 gradle wrapper --gradle-version 4.7 --distribution-type ALL
 ```
 
+#### Release and publish
+Append ```-Ppublish=true``` and include ```publishPlugin``` task.
+For example
+```
+gradle clean check buildPlugin release publishPlugin -Ppublish=true
+```
+
 ### Useful run commands
 Run with previous sandbox contents
 ```

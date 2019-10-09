@@ -8,8 +8,8 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "0.4.5"
-    id 'com.palantir.git-version' version '0.11.0'
+    id "org.jetbrains.intellij" version "0.4.10"
+    id 'com.palantir.git-version' version '0.12.2'
     id 'ch.netzwerg.release' version '1.2.5'
 }
 
@@ -20,10 +20,15 @@ repositories {
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: "java"
 
-sourceCompatibility = javaVersion
-targetCompatibility = javaVersion
+def javaVersion = JavaVersion.VERSION_1_8
+
+java {
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+}
 
 def fast = Boolean.valueOf(String.valueOf(findProperty('fast')))
+def publish = Boolean.valueOf(String.valueOf(findProperty('publish')))
 
 configurations {
     testAgent {
@@ -80,6 +85,15 @@ release {
     dependsOn buildPlugin
 }
 
+if (publish) {
+    apply from: 'publish.gradle'
+    publishPlugin {
+        token = project.publishToken
+        username = project.publishUsername
+        password = project.publishPassword
+        channels = publishChannels()
+    }
+}
 
 def static buildTime() {
     def df = new SimpleDateFormat("yyyyMMdd.HHmmss")
@@ -87,7 +101,16 @@ def static buildTime() {
     return df.format(new Date())
 }
 
+def isStableBuild() {
+    def details = versionDetails()
+    return details.branchName ==~ /(master|\d+-release)/
+}
+
 def buildType() {
     def details = versionDetails()
     return details.branchName != "master" ? "EAP" : "Stable"
+}
+
+def publishChannels() {
+    return isStableBuild() ? ['default', 'eap'] : ['eap']
 }
