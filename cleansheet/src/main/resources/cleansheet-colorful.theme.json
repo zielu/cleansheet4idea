@@ -33,6 +33,8 @@
     },
 
     "Button": {
+      "startBackground": "#edf7f9",
+      "endBackground": "#e5eff1",
       "shadowColor": "#A6A6A620",
       "startBorderColor": "#C4C4C4",
       "endBorderColor": "#C4C4C4",
