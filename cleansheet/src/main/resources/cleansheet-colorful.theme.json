@@ -37,7 +37,7 @@
       "startBorderColor": "#C4C4C4",
       "endBorderColor": "#C4C4C4",
       "default": {
-        "foreground": "#f6f6f6",
+        "foreground": "#f0f0f0",
         "startBackground": "#528CC7",
         "endBackground": "#4989CC",
         "startBorderColor": "#487EB8",
@@ -47,10 +47,14 @@
       }
     },
 
-    "ComboBox.nonEditableBackground": "#f6f6f6",
-    "ComboBox.ArrowButton.background": "#f6f6f6",
+    "ComboBox": {
+      "nonEditableBackground": "#edf7f9",
+      "background": "#edf7f9",
+      "ArrowButton.background": "#E8E9EB",
+      "ArrowButton.nonEditableBackground": "#E8E9EB"
+    },
 
-    "ComboBoxButton.background": "#f6f6f6",
+    "ComboBoxButton.background": "#edf7f9",
 
     "ComboPopup.border": "1,1,1,1,D4D6D9",
 
@@ -93,7 +97,7 @@
     },
 
     "List": {
-      "background": "#f6f6f6"
+      "background": "#edf7f9"
     },
 
     "Notification": {
@@ -177,9 +181,10 @@
 
     "TableHeader.cellBorder": "3,0,3,0",
 
-    "TextArea.background": "#f6f6f6",
+    "TextArea.background": "#f2f3f4",
 
-    "TextField.background": "#f6f6f6",
+    "TextField.background": "#f2f3f4",
+    "FormattedTextField.background": "#f2f3f4",
 
     "ToggleButton": {
       "onBackground": "#407FC7",
@@ -210,7 +215,7 @@
 
     "Tree": {
       "rowHeight": "20",
-      "background": "#eff0f2"
+      "background": "#ecedef"
     },
 
     "VersionControl": {
@@ -218,7 +223,10 @@
       "FileHistory.Commit.selectedBranchBackground": "#e6f0f2"
     },
 
-    "WelcomeScreen.Projects.background": "#edf7f9"
+    "WelcomeScreen.Projects": {
+      "background": "#edf7f9",
+      "selectionBackground": "#dfe9eb"
+    }
   },
 
   "icons": {
