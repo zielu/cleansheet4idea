@@ -21,7 +21,7 @@
       "infoForeground": "#808080",
       "modifiedItemForeground": "#006be6",
 
-      "acceleratorSelectionForeground": "#F8F8F8",
+      "acceleratorSelectionForeground": "#f6f6f6",
 
       "separatorColor": "#d4d6d9",
       "borderColor": "#d4d6d9"
@@ -37,7 +37,7 @@
       "startBorderColor": "#C4C4C4",
       "endBorderColor": "#C4C4C4",
       "default": {
-        "foreground": "#F8F8F8",
+        "foreground": "#f6f6f6",
         "startBackground": "#528CC7",
         "endBackground": "#4989CC",
         "startBorderColor": "#487EB8",
@@ -47,10 +47,10 @@
       }
     },
 
-    "ComboBox.nonEditableBackground": "#F8F8F8",
-    "ComboBox.ArrowButton.background": "#f7f8fa",
+    "ComboBox.nonEditableBackground": "#f6f6f6",
+    "ComboBox.ArrowButton.background": "#f6f6f6",
 
-    "ComboBoxButton.background": "#F8F8F8",
+    "ComboBoxButton.background": "#f6f6f6",
 
     "ComboPopup.border": "1,1,1,1,D4D6D9",
 
@@ -61,7 +61,7 @@
 
     "Counter": {
       "background": "#9AA7B0",
-      "foreground": "#F8F8F8"
+      "foreground": "#f6f6f6"
     },
 
     "Editor": {
@@ -73,7 +73,7 @@
     "EditorPane.inactiveBackground": "#F2F3F5",
 
     "EditorTabs": {
-      "underlinedTabBackground": "#f5f5f5",
+      "underlinedTabBackground": "#edf7f9",
       "inactiveColoredFileBackground": "#43434312"
     },
 
@@ -93,7 +93,7 @@
     },
 
     "List": {
-      "background": "#F8F8F8"
+      "background": "#f6f6f6"
     },
 
     "Notification": {
@@ -116,11 +116,11 @@
       }
     },
 
-    "PasswordField.background": "#F8F8F8",
+    "PasswordField.background": "#f6f6f6",
 
     "Plugins": {
-      "background": "#F8F8F8",
-      "SearchField.background": "#F8F8F8",
+      "background": "#f6f6f6",
+      "SearchField.background": "#f6f6f6",
       "SectionHeader.foreground": "#808080",
       "Tab.selectedBackground": "#e3e4e5",
       "Tab.hoverBackground": "#D5D6D7",
@@ -149,7 +149,7 @@
     },
 
     "SearchEverywhere":  {
-      "SearchField.background": "#F8F8F8",
+      "SearchField.background": "#f6f6f6",
       "Tab.selectedBackground": "#D5D6D7",
       "Advertiser.foreground": "#8C8C8C"
     },
@@ -159,7 +159,7 @@
       "endBackground": "#FFD080"
     },
 
-    "SidePanel.background": "#F2F3F5",
+    "SidePanel.background": "#edeef0",
 
     "SpeedSearch": {
       "background": "#D5D6D7",
@@ -173,13 +173,13 @@
       "contentAreaColor": "#E1E3E6"
     },
 
-    "Table.stripeColor": "#F8F8F8",
+    "Table.stripeColor": "#f6f6f6",
 
     "TableHeader.cellBorder": "3,0,3,0",
 
-    "TextArea.background": "#F8F8F8",
+    "TextArea.background": "#f6f6f6",
 
-    "TextField.background": "#F8F8F8",
+    "TextField.background": "#f6f6f6",
 
     "ToggleButton": {
       "onBackground": "#407FC7",
@@ -190,31 +190,34 @@
 
     "ToolWindow": {
       "Header": {
-        "background": "#E8E9EB",
-        "inactiveBackground": "#F2F3F5"
+        "background": "#e1e2e4",
+        "inactiveBackground": "#e9eaec",
+        "borderColor": "#C4C4C4"
       },
       "HeaderTab": {
-        "underlinedTabBackground": "#D5D6D7",
-        "hoverBackground": "#D5D6D7",
-        "selectedInactiveBackground": "#e1e2e3",
-        "hoverInactiveBackground": "#e1e2e3"
+        "underlinedTabBackground": "#f5f5f5",
+        "hoverBackground": "#cbcccd",
+        "selectedInactiveBackground": "#f5f5f5",
+        "underlinedTabInactiveBackground": "#f5f5f5",
+        "hoverInactiveBackground": "#dbdcdd"
       },
+
       "Button": {
-        "selectedBackground": "#D5D6D7",
+        "selectedBackground": "#f5f5f5",
         "hoverBackground": "#D5D6D7"
       }
     },
-
     "Tree": {
       "rowHeight": "20",
-      "background": "#ebecee"
+      "background": "#eff0f2"
     },
 
     "VersionControl": {
       "Log.Commit.currentBranchBackground": "#e6f0f2",
       "FileHistory.Commit.selectedBranchBackground": "#e6f0f2"
-    }
+    },
 
+    "WelcomeScreen.Projects.background": "#eff0f2"
   },
 
   "icons": {
