@@ -20,7 +20,7 @@ repositories {
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: "java"
 
-def javaVersion = JavaVersion.VERSION_1_8
+def javaVersion = JavaVersion.VERSION_11
 
 java {
     sourceCompatibility = javaVersion
