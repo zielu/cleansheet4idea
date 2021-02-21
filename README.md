@@ -2,6 +2,8 @@ Clean Sheet Theme for Jetbrains IDEs
 ======================================
 Port of Eclipse [Clean Sheet theme](https://fappel.github.io/xiliary/clean-sheet.html)
 
+![Preview](preview.png?raw=true "Preview")
+
 ## Features
 For list of features see [description](./cleansheet/description.html)
 
@@ -9,7 +11,7 @@ For list of features see [description](./cleansheet/description.html)
 For list of change notes see [changenotes](./cleansheet/change-notes.html)
 
 ## XML starlet
-Removed options with name that starts with `VALUE.`
+Removed options with `@name` that starts with `VALUE.`
 ```
 xml ed -d "/scheme/attributes/option[starts-with(@name, 'VALUE.')]" cleansheet.xml
 ```
