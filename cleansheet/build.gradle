@@ -8,7 +8,7 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "0.6.5"
+    id "org.jetbrains.intellij" version "1.0"
     id 'com.palantir.git-version' version '0.12.3'
     id 'ch.netzwerg.release' version '1.2.5'
 }
@@ -59,8 +59,8 @@ compileJava.options.encoding = encoding
 compileTestJava.options.encoding = encoding
 
 patchPluginXml {
-    changeNotes "${file('change-notes.html').getText('UTF-8')}"
-    pluginDescription "${file('description.html').getText('UTF-8')}"
+    changeNotes = "${file('change-notes.html').getText('UTF-8')}"
+    pluginDescription = "${file('description.html').getText('UTF-8')}"
             .replace("RELEASE_DATETIME", buildTime())
             .replace("RELEASE_TYPE", buildType());
 }
