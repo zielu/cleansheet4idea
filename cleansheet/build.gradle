@@ -8,8 +8,8 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "1.9.0"
-    id 'com.palantir.git-version' version '0.12.3'
+    id "org.jetbrains.intellij" version "1.12.0"
+    id 'com.palantir.git-version' version '0.15.0'
     id 'ch.netzwerg.release' version '1.2.5'
 }
 
@@ -30,21 +30,20 @@ java {
 def fast = Boolean.valueOf(String.valueOf(findProperty('fast')))
 def publish = Boolean.valueOf(String.valueOf(findProperty('publish')))
 
+def vendor = 'LukaszZielinski'
+
 configurations {
     testAgent {
         transitive = false
     }
 }
 
-def ideaCacheDir = Paths.get(System.getProperty('user.home')).resolve('intellij-gradle-cache').toAbsolutePath().toString()
-println("Idea cache dir: " + ideaCacheDir)
-
 intellij {
     version = ideaVersion
     type = ideaType
     updateSinceUntilBuild = false
     downloadSources = true
-    ideaDependencyCachePath = ideaCacheDir
+    sandboxDir = "${System.properties['user.home']}${File.separator}cleansheet4idea-build${File.separator}sandbox"
 }
 
 apply plugin: 'idea'
@@ -70,10 +69,10 @@ jar {
         attributes(
             'Name': project.name,
             'Specification-Title': project.name,
-            'Specification-Vendor': 'Lukasz Zielinski (zieluuuu@gmail.com)',
+            'Specification-Vendor': vendor,
             'Specification-Version': project.version,
             'Implementation-Title': project.name,
-            'Implementation-Vendor': 'Lukasz Zielinski (zieluuuu@gmail.com)',
+            'Implementation-Vendor': vendor,
             'Implementation-Version': versionDetails().gitHash,
             'Build-Date': buildTime()
         )

@@ -2,7 +2,7 @@
   <id>zielu.cleansheet</id>
   <name>Clean Sheet Theme</name>
   <version>211.0.0-dev</version>
-  <vendor url="https://github.com/zielu/cleansheet4idea">Lukasz Zielinski</vendor>
+  <vendor url="https://github.com/zielu">LukaszZielinski</vendor>
 
   <description><![CDATA[
       inlined during build from description.html
@@ -20,7 +20,7 @@
   <!-- enable plugins in all products -->
   <depends>com.intellij.modules.platform</depends>
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="211.4961" until-build="223.*"/>
+  <idea-version since-build="211.4961" until-build="231.*"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
