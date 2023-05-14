@@ -27,36 +27,36 @@ xml ed -d "/scheme/attributes/option[starts-with(@name, 'VALUE.')]" cleansheet.x
 
 #### Release current `-SNAPSHOT`
 ```
-gradle clean buildPlugin release
+./gradlew clean buildPlugin release
 ```
 #### Upgrade to next minor version
 ```
-gradle clean buildPlugin releaseMinorVersion
+./gradlew clean buildPlugin releaseMinorVersion
 ```
 #### Upgrade to next major version
 ```
-gradle clean buildPlugin releaseMajorVersion
+./gradlew clean buildPlugin releaseMajorVersion
 ```
 
 ### Useful build commands
 Update gradlew version
 ```
-gradle wrapper --gradle-version 4.7 --distribution-type ALL
+./gradlew wrapper --gradle-version 8.1.1 --distribution-type ALL
 ```
 
 #### Release and publish
 Append ```-Ppublish=true``` and include ```publishPlugin``` task.
 For example
 ```
-gradle clean check buildPlugin release publishPlugin -Ppublish=true
+./gradlew clean check buildPlugin release publishPlugin -Ppublish=true
 ```
 
 ### Useful run commands
 Run with previous sandbox contents
 ```
-gradle runIde
+./gradlew runIde
 ```
 Run with fresh sandbox
 ```
-gradle clean runIde
+./gradlew clean runIde
 ```

@@ -20,7 +20,7 @@
   <!-- enable plugins in all products -->
   <depends>com.intellij.modules.platform</depends>
   <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="211.4961" until-build="231.*"/>
+  <idea-version since-build="211.4961" until-build="232.*"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
