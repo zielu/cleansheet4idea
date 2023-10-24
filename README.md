@@ -41,7 +41,7 @@ xml ed -d "/scheme/attributes/option[starts-with(@name, 'VALUE.')]" cleansheet.x
 ### Useful build commands
 Update gradlew version
 ```
-./gradlew wrapper --gradle-version 8.1.1 --distribution-type ALL
+./gradlew wrapper --gradle-version 8.4 --distribution-type ALL
 ```
 
 #### Release and publish
